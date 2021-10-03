@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 function NavBar() {
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+
   return (
     <nav>
       <NavLink activeClassName="selected-page" className="logo" to="/">
@@ -17,22 +20,11 @@ function NavBar() {
         <NavLink className="link" to="/blog" activeClassName="selected-page">
           Blog
         </NavLink>
+        <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+          {isLoggedIn ? 'Logout' : 'Login'}
+        </button>
       </div>
     </nav>
-    // <ul>
-    //   <li>
-    //     <Link to="/">Home</Link>
-    //   </li>
-    //   <li>
-    //     <Link to="/about">About</Link>
-    //   </li>
-    //   <li>
-    //     <Link to="/contact">Contact</Link>
-    //   </li>
-    //   <li>
-    //     <Link to="/blog">Blog</Link>
-    //   </li>
-    // </ul>
   );
 }
 

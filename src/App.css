@@ -18,12 +18,15 @@ nav {
 }
 
 button {
+  width: 3.5rem;
   border: solid 1px gray;
   text-decoration: none;
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.5);
-  padding: 5px 12px;
+  padding: 8px 12px;
+  font-weight: 800;
+  border-radius: 5px;
 }
 
 .link {

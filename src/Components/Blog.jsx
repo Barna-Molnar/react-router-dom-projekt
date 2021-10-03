@@ -7,7 +7,6 @@ import Recipes from './Recipes';
 function Blog() {
   let { path, url } = useRouteMatch();
 
-  console.log(path, url);
   return (
     <div>
       <ul>

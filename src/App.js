@@ -8,6 +8,7 @@ import NavBar from './Components/NavBar';
 import AuthContextprovider from './context/AuthContext';
 import Admin from './Components/Admin';
 import PrivateRoute from './Components/PrivateRoute';
+import PrivateRoute2 from './Components/PrivateRoute2';
 
 function App() {
   return (
@@ -20,9 +21,9 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/blog" component={Blog} />
           {/* <Route path="/admin" component={Admin} /> */}
-          <PrivateRoute path="/admin">
-            <Admin />
-          </PrivateRoute>
+          <PrivateRoute2 path="/admin"  component={Admin}/>
+          
+       
         </Switch>
       </BrowserRouter>
     </AuthContextprovider>
